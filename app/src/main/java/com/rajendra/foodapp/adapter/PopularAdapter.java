@@ -26,12 +26,14 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.PopularV
     public PopularAdapter(Context context, List<Popular> popularList) {
         this.context = context;
         this.popularList = popularList;
+
+        // first product
         Popular food = new Popular();
         food.setName("Pizza");
         food.setDeliveryTime("10 min");
         food.setNote("3");
         food.setPrice("2000");
-        food.setImageUrl("https://image.freepik.com/photos-gratuite/pizza-isolee-fond-blanc-hot-fast-food_75930-105.jpg");
+        food.setImageUrl("https://www.yumyum.sn/upload/images/cache/product/9/450x450/5-fromages.png");
         food.setDeliveryCharges("");
         food.setRating("4.3");
         this.popularList.add(food);
