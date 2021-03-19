@@ -114,7 +114,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/add_to_cart_bg"
         android:fontFamily="@font/open_sans_bold"
-        android:text="Add to cart"
+        android:text="Ajouter au panier"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.rajendra.foodapp.adapter.AllMenuAdapter;
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     RecommendedAdapter recommendedAdapter;
     AllMenuAdapter allMenuAdapter;
 
+    ImageView myButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,14 +58,6 @@ public class MainActivity extends AppCompatActivity {
                 getRecommendedData(foodDataList.get(0).getRecommended());
 
                 getAllMenu(foodDataList.get(0).getAllmenu());
-                // lets run it.
-                // we have fetched data from server.
-                // now we have to show data in app using recycler view
-                // lets make recycler view adapter
-                // we have setup and bind popular section
-                // in a same way we add recommended and all menu items
-                // we add two adapter class for allmenu and recommended items.
-                // so lets do it fast.
 
             }
 
@@ -70,8 +67,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
+        myButton = (ImageView) findViewById(R.id.cart_image);
+        myButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Cart.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -105,15 +108,4 @@ public class MainActivity extends AppCompatActivity {
         allMenuAdapter.notifyDataSetChanged();
 
     }
-    // today w are going to make a food app like zomato and swiggy.
-    // we have 3 category in data
-    // popular items, recommended items and all menu,
-    // lets have have a look on json data.
-    // so lets start coding.
-    // lets add retrofit dependency in gradle file for network call.
-    // we have setup model class and adapter class
-    // now we are going to setup data in recyclerview.
-    // complited all recyclerview
-    // now we will setup on click listener on items.
-    // tutorial complited see you in the next video.
 }
