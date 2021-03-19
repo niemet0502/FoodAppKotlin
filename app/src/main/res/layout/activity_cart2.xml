@@ -6,4 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".CartActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Panier"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
