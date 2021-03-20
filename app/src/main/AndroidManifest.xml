@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CartActivity"></activity>
+        <activity android:name=".HomeClientActivity"></activity>
+        <activity android:name=".CartActivity" />
         <activity android:name=".FoodDetails" />
         <activity android:name=".MainActivity">
             <intent-filter>
