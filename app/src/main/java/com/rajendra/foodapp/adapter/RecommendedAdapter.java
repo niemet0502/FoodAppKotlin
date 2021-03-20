@@ -42,7 +42,7 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
         holder.recommendedRating.setText(recommendedList.get(position).getRating());
         holder.recommendedCharges.setText(recommendedList.get(position).getDeliveryCharges());
         holder.recommendedDeliveryTime.setText(recommendedList.get(position).getDeliveryTime());
-        holder.recommendedPrice.setText("₹ "+recommendedList.get(position).getPrice());
+        holder.recommendedPrice.setText(" "+recommendedList.get(position).getPrice());
 
         Glide.with(context).load(recommendedList.get(position).getImageUrl()).into(holder.recommendedImage);
 
