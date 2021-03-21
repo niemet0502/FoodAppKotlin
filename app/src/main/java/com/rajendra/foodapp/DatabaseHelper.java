@@ -64,9 +64,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("nom" , username);
-        values.put("main" , email);
-        values.put("password" , password);
+        values.put(COL_2 , username);
+        values.put(COL_3, email);
+        values.put(COL_4 , password);
 
         long result = db.insert(TABLE_TODO , null , values);
         if(result == -1)

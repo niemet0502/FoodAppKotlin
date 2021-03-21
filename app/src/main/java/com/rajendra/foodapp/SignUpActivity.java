@@ -35,6 +35,9 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(SignUpActivity.this, "Utilisateur enregistree!!", Toast.LENGTH_SHORT).show();
                 }
                 else
+                    mail.setText("");
+                    nom.setText("");
+                    password.setText("");
                     Toast.makeText(SignUpActivity.this, "Erreur !!", Toast.LENGTH_SHORT).show();
             }
         });
