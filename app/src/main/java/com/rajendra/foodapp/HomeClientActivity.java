@@ -38,6 +38,8 @@ public class HomeClientActivity extends AppCompatActivity {
 
     ImageView myButton;
 
+    ImageView button;
+    private  SharedPreferenceConfig sharedPreferenceConfig;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,7 +78,24 @@ public class HomeClientActivity extends AppCompatActivity {
             }
         });
 
+        sharedPreferenceConfig = new SharedPreferenceConfig(getApplicationContext());
+
+        button = (ImageView) findViewById(R.id.logout_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Logout();
+            }
+        });
+
     }
+
+    private void Logout() {
+        sharedPreferenceConfig.login_status(false);
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
+
 
     private void  getPopularData(List<Popular> popularList){
 
